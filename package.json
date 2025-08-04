@@ -1,13 +1,26 @@
 {
+  "name": "itu-online-store",
+  "version": "1.0.0",
+  "description": "ITU Online Store backend + frontend base",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
   "dependencies": {
     "bcrypt": "^6.0.0",
     "dotenv": "^17.2.1",
     "ejs": "^3.1.10",
-    "express": "^5.1.0",
+    "express": "^4.18.2",
     "express-session": "^1.18.2",
     "multer": "^2.0.2",
     "passport": "^0.7.0",
     "passport-google-oauth20": "^2.0.0",
     "sqlite3": "^5.1.7"
-  }
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  },
+  "author": "Muhammad Luqmaan Vahed",
+  "license": "MIT"
 }

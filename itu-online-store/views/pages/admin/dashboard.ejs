@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Dashboard - IT Universe</title>
+  <link rel="stylesheet" href="/styles/colours.css" />
+  <link rel="stylesheet" href="/styles/main.css" />
+</head>
+<body>
+  <% include ../../partials/header.ejs %>
+
+  <main>
+    <h2>Admin Dashboard</h2>
+
+    <section>
+      <h3>Contact Submissions</h3>
+      <% if (contactSubmissions && contactSubmissions.length > 0) { %>
+        <ul>
+          <% contactSubmissions.forEach(item => { %>
+            <li><%= item.name %> (<%= item.email %>): <%= item.message %></li>
+          <% }) %>
+        </ul>
+      <% } else { %>
+        <p>No contact submissions.</p>
+      <% } %>
+    </section>
+
+    <section>
+      <h3>Booking Submissions</h3>
+      <% if (bookingSubmissions && bookingSubmissions.length > 0) { %>
+        <ul>
+          <% bookingSubmissions.forEach(item => { %>
+            <li>Date: <%= item.date %>, Time: <%= item.time %></li>
+          <% }) %>
+        </ul>
+      <% } else { %>
+        <p>No booking submissions.</p>
+      <% } %>
+    </section>
+  </main>
+
+  <% include ../../partials/footer.ejs %>
+</body>
+</html>

@@ -1,0 +1,9 @@
+:root {
+  --color-primary: #4a90e2;       /* Light blue */
+  --color-secondary: #002f6c;     /* Navy / Dark blue */
+  --color-highlight: #f5a623;     /* Orange trim */
+  --color-error: #e74c3c;         /* Red for errors */
+  --color-success: #27ae60;       /* Green for success */
+  --color-text: #333333;
+  --color-background: #ffffff;
+}

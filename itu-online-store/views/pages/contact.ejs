@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us - IT Universe</title>
+  <link rel="stylesheet" href="/styles/colours.css" />
+  <link rel="stylesheet" href="/styles/main.css" />
+</head>
+<body>
+  <% include ../partials/header.ejs %>
+
+  <main>
+    <h2>Contact Us</h2>
+    <% if (typeof message !== 'undefined') { %>
+      <p class="success"><%= message %></p>
+    <% } %>
+
+    <form method="POST" action="/contact">
+      <label>Name:<br />
+        <input type="text" name="name" required />
+      </label><br />
+      <label>Email:<br />
+        <input type="email" name="email" required />
+      </label><br />
+      <label>Message:<br />
+        <textarea name="message" required></textarea>
+      </label><br />
+      <button type="submit">Send</button>
+    </form>
+  </main>
+
+  <% include ../partials/footer.ejs %>
+</body>
+</html>

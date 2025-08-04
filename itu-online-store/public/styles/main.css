@@ -1,0 +1,82 @@
+body {
+  font-family: 'Helvetica', Arial, sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  margin: 0;
+  padding: 0 1rem;
+}
+
+header nav a {
+  color: var(--color-secondary);
+  text-decoration: none;
+  margin-right: 1rem;
+  font-weight: bold;
+}
+
+header nav a:hover {
+  color: var(--color-highlight);
+}
+
+h1, h2, h3 {
+  font-family: 'Orbitron', sans-serif;
+  color: var(--color-primary);
+}
+
+footer {
+  margin-top: 2rem;
+  padding: 1rem 0;
+  text-align: center;
+  color: var(--color-secondary);
+  border-top: 1px solid var(--color-primary);
+}
+
+.success {
+  color: var(--color-success);
+  margin-bottom: 1rem;
+}
+
+.error {
+  color: var(--color-error);
+  margin-bottom: 1rem;
+}
+
+form label {
+  display: block;
+  margin: 0.5rem 0 0.25rem;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.5rem;
+  border: 1px solid var(--color-secondary);
+  border-radius: 4px;
+}
+
+form button {
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+  background-color: var(--color-highlight);
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: var(--color-primary);
+}
+
+.product-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.product-list li {
+  border: 1px solid var(--color-secondary);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+}
