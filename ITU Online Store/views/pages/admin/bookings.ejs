@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Manage Bookings</title>
+  <link rel="stylesheet" href="/styles/colours.css">
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+  <% include ../partials/header.ejs %>
+  <main>
+    <h2>Manage Bookings</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Booking ID</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Submitted At</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% bookings.forEach(booking => { %>
+          <tr>
+            <td><%= booking.id %></td>
+            <td><%= booking.date %></td>
+            <td><%= booking.time %></td>
+            <td><%= booking.submitted_at %></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </main>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Analytics</title>
+  <link rel="stylesheet" href="/styles/colours.css">
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+  <% include ../partials/header.ejs %>
+  <main>
+    <h2>Analytics Dashboard</h2>
+    <section>
+      <h3>Top-Selling Products</h3>
+      <ul>
+        <% topSelling.forEach(item => { %>
+          <li><%= item.name %>: <%= item.totalSold %> sold</li>
+        <% }); %>
+      </ul>
+    </section>
+    <section>
+      <h3>Total Earnings</h3>
+      <p>$<%= totalEarnings.totalEarnings %></p>
+    </section>
+  </main>
+</body>
+</html>

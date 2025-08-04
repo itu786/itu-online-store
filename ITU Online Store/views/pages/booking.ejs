@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Repair Booking - ITU Online Store</title>
+  <link rel="stylesheet" href="/styles/colours.css">
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+  <% include ../partials/header.ejs %>
+  <main>
+    <h2>Repair Booking</h2>
+    <% if (message) { %>
+      <p class="confirmation"><%= message %></p>
+    <% } %>
+    <form action="/booking" method="POST">
+      <label for="date">Select a date:</label>
+      <input type="date" id="date" name="date" required>
+
+      <label for="time">Select a time:</label>
+      <input type="time" id="time" name="time" required>
+
+      <button type="submit">Book Now</button>
+    </form>
+  </main>
+</body>
+</html>

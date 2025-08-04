@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - ITU Online Store</title>
+  <link rel="stylesheet" href="/styles/colours.css">
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+  <%- include('../../partials/header.ejs') %>
+  <main>
+    <h2>Admin Dashboard</h2>
+    <section>
+      <h3>Contact Submissions</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Message</th>
+            <th>Submitted At</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% contactSubmissions.forEach(submission => { %>
+            <tr>
+              <td><%= submission.id %></td>
+              <td><%= submission.name %></td>
+              <td><%= submission.email %></td>
+              <td><%= submission.message %></td>
+              <td><%= submission.submitted_at %></td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    </section>
+    <section>
+      <h3>Booking Submissions</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Submitted At</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% bookingSubmissions.forEach(submission => { %>
+            <tr>
+              <td><%= submission.id %></td>
+              <td><%= submission.date %></td>
+              <td><%= submission.time %></td>
+              <td><%= submission.submitted_at %></td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>

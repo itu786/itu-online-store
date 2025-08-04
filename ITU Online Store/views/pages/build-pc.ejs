@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Build Your Own PC</title>
+  <link rel="stylesheet" href="/styles/colours.css">
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+  <% include ../partials/header.ejs %>
+  <main>
+    <h2>Build Your Own PC</h2>
+    <form action="/build-pc/validate" method="POST">
+      <label for="cpu">Select CPU:</label>
+      <select id="cpu" name="cpu">
+        <% components.filter(c => c.category === 'CPU').forEach(cpu => { %>
+          <option value="<%= cpu.name %>"><%= cpu.name %></option>
+        <% }); %>
+      </select>
+
+      <label for="motherboard">Select Motherboard:</label>
+      <select id="motherboard" name="motherboard">
+        <% components.filter(c => c.category === 'Motherboard').forEach(mb => { %>
+          <option value="<%= mb.name %>"><%= mb.name %></option>
+        <% }); %>
+      </select>
+
+      <label for="ram">Select RAM:</label>
+      <select id="ram" name="ram">
+        <% components.filter(c => c.category === 'RAM').forEach(ram => { %>
+          <option value="<%= ram.name %>"><%= ram.name %></option>
+        <% }); %>
+      </select>
+
+      <button type="submit">Validate Configuration</button>
+    </form>
+  </main>
+</body>
+</html>

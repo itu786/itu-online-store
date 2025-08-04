@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Address Book</title>
+  <link rel="stylesheet" href="/styles/colours.css">
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+  <% include ../partials/header.ejs %>
+  <main>
+    <h2>Your Address Book</h2>
+    <form action="/profile/address" method="POST">
+      <label for="address">Add a new address:</label>
+      <input type="text" id="address" name="address" required>
+      <button type="submit">Add Address</button>
+    </form>
+    <h3>Saved Addresses</h3>
+    <ul>
+      <% addresses.forEach(address => { %>
+        <li><%= address.address %></li>
+      <% }); %>
+    </ul>
+  </main>
+</body>
+</html>
